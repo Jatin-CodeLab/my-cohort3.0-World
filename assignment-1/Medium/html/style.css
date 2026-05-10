@@ -620,6 +620,11 @@ p{
     font-size: 24px;
     text-align: center;
     padding: 20px;
+  	background: linear-gradient(
+		90deg,
+		rgba(219, 222, 242, 1) 6%,
+		rgba(214, 215, 249, 1) 96%
+	);
   }
 
   .main-content{
