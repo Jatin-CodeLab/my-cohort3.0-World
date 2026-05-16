@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 * {
 	margin: 0;
 	padding: 0;
@@ -74,7 +74,7 @@ h6 {
 	width: 70%;
 	height: 95%;
 	display: grid;
-	grid-template-rows: 1fr 1fr .8fr 1fr;
+	grid-template-rows: 1fr 1fr 0.8fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-areas:
 		"one two three four"
@@ -98,7 +98,7 @@ h6 {
 		padding-bottom: 1.5rem;
 		position: relative;
 
-		.img{
+		.img {
 			position: absolute;
 			width: 15%;
 			top: 5%;
@@ -117,7 +117,7 @@ h6 {
 			color: white;
 			gap: 5px;
 			padding: 0px 5px;
-			img{
+			img {
 				width: 45%;
 			}
 		}
@@ -134,7 +134,7 @@ h6 {
 			color: white;
 			gap: 5px;
 			padding: 0px 5px;
-			img{
+			img {
 				width: 45%;
 			}
 		}
@@ -151,7 +151,7 @@ h6 {
 			color: white;
 			gap: 5px;
 			padding: 0px 5px;
-			img{
+			img {
 				width: 45%;
 			}
 		}
@@ -163,20 +163,20 @@ h6 {
 		flex-direction: column;
 		align-items: start;
 		justify-content: space-around;
-		.img{
+		.img {
 			width: 20%;
 		}
 
-		span{
+		span {
 			font-size: 1.7rem;
 		}
 
-		.btn{
+		.btn {
 			display: flex;
 			align-items: center;
 			justify-content: space-around;
 
-			img{
+			img {
 				width: 45%;
 			}
 		}
@@ -190,53 +190,90 @@ h6 {
 		justify-content: center;
 		gap: 2rem;
 
-		.text{
-			h2{
+		.text {
+			h2 {
 				font-weight: 900;
 			}
 		}
-		.pa{
+		.pa {
 			display: flex;
 			flex-direction: column;
 			align-items: start;
 			justify-content: center;
-			gap: .5rem;
+			gap: 0.5rem;
 		}
 	}
 	.fourBox {
 		background-color: rgb(255, 255, 255);
 		grid-area: four;
-		padding: 1rem;
+		padding: 1rem 1.5rem;
 		display: flex;
 		flex-direction: column;
 		align-items: start;
 		justify-content: space-around;
 
-		.text1{
-			display:flex;
+		.text1 {
+			display: flex;
 			align-items: center;
 			justify-content: start;
 			gap: 1rem;
 
-			img{
+			img {
 				width: 15%;
 			}
 		}
-		.text2{
-			h1{
-			font-weight:bolder;
-
+		.text2 {
+			h1 {
+				font-weight: bolder;
 			}
 		}
-		.btn{
+		.btn {
 			width: 100%;
-			height: 5vw;
+			height: 6.5vw;
 			background-color: #ecb1a3;
+			border-radius: 10px;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			justify-content: space-between;
+			padding: 1rem 1rem;
+			gap: 2rem;
+			.on {
+				display: flex;
+				gap: 1rem;
+				align-items: center;
+				justify-content: start;
+				img {
+					width: 20%;
+				}
+			}
+			p {
+				font-weight: 700;
+			}
 		}
 	}
 	.fiveBox {
 		background-color: rgb(255, 255, 255);
 		grid-area: five;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		justify-content: space-between;
+
+		h1 {
+			font-size: 1.7rem;
+		}
+		.contentText {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			img {
+				width: 15%;
+			}
+			span {
+				font-weight: 800;
+			}
+		}
 	}
 	.sixBox {
 		background-color: #fef6e1;
@@ -250,7 +287,7 @@ h6 {
 			align-items: center;
 			justify-content: center;
 			font-size: 6rem;
-font-family: "Bungee", sans-serif;
+			font-family: "Bungee", sans-serif;
 			img {
 				width: 30%;
 			}
@@ -259,14 +296,65 @@ font-family: "Bungee", sans-serif;
 	.sevenBox {
 		background-color: #ecb1a3;
 		grid-area: seven;
+		display: flex;
+		align-items: center;
+		/* justify-content: space-around; */
+		gap: 8rem;
+
+			img {
+				width: 40%;
+				border-radius: 10px;
+			}
+		.textContent {
+
+			.text {
+				h2{
+					font-size: 2rem;
+					font-weight: 800;
+				}
+			}
+			.text2 {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 4rem;
+				.imgs {
+					width: 50%;
+					height: 40%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					img {
+						/* top: 0%; */
+						width: 20%;
+						height: 30%;
+						border-radius: 50%;
+						z-index: 2;
+					}
+				}
+			}
+		}
 	}
 	.eightBox {
 		background-color: rgb(102, 102, 102);
 		grid-area: eight;
+		position: relative;
+		display: flex;
+		align-items: end;
+		justify-content: center;
+		img{
+			position: absolute;
+			width: 70%;
+			bottom: 0%;
+		}
 	}
 	.nineBox {
 		background-color: #ecb1a3;
 		grid-area: nine;
+
+		img{
+			width: 100%;
+		}
 	}
 }
 
