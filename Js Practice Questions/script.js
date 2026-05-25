@@ -1,3 +1,6 @@
+console.log("Hare Krishna !");
+
+
 // ? JavaScript Beginner Practice Questions
 
 //? Console & Basics
@@ -342,32 +345,178 @@
 //     console.log("not ");
 // }
 
-// Create a simple grading system:
-// - 90+ → A
-// - 75+ → B
-// - 50+ → C
-// - below 50 → Fail
-let studentGrading = 38
-if (100 >= studentGrading >= 95) {
-	console.log("A+");
-}
-else if (90 <= studentGrading && studentGrading <= 95) {
-	console.log("B");
-} else if (80 <= studentGrading && studentGrading <= 90) {
-	console.log("C");
-} else if (70 <= studentGrading && studentGrading <= 80) {
-	console.log("D");
-} else if (55 <= studentGrading && studentGrading <= 70) {
-	console.log("E");
-} else if (37 <= studentGrading && studentGrading <= 55) {
-	console.log("F");
-} else {
-	console.log("FAIL !");
-}
+// // Create a simple grading system:
+// // - 90+ → A
+// // - 75+ → B
+// // - 50+ → C
+// // - below 50 → Fail
+// let studentGrading = 98
+// if (100 >= studentGrading && studentGrading >= 95) {
+// 	console.log("A+");
+// } else if (90 <= studentGrading && studentGrading <= 95) {
+// 	console.log("A");
+// } else if (80 <= studentGrading && studentGrading <= 90) {
+// 	console.log("B");
+// } else if (70 <= studentGrading && studentGrading <= 80) {
+// 	console.log("C");
+// } else if (55 <= studentGrading && studentGrading <= 70) {
+// 	console.log("D");
+// } else if (37 <= studentGrading && studentGrading <= 55) {
+// 	console.log("E");
+// } else {
+// 	console.log("FAIL !");
+// }
+
+// // Check whether a character is a vowel or consonant.
+// let a = "u"
+// if (a == "a" || a == "e" || a == "i" || a == "o" || a == "u") {
+// 	console.log("this character is vowel");
+// } else {
+// 	console.log("this character is consonant");
+// }
+
+// // Create a calculator using `switch` statement.
+// let calNumber = prompt("enter");
+// let ans;
+// let num1 = 50
+// let num2 = 6
+// switch (calNumber) {
+// 	case "+":
+// 		ans = num1 + num2;
+// 		console.log(ans);
+// 		break;
+// 	case "-":
+// 		ans = num1 - num2;
+// 		console.log(ans);
+// 		break;
+// 	case "*":
+// 		ans = num1 * num2;
+// 		console.log(ans);
+// 		break;
+// 	case "/":
+// 		ans = num1 / num2;
+// 		console.log(ans);
+// 		break;
+// 	default:
+// 		break;
+// }
+
+// // Print the day name based on a number (1–7).
+// let day = 1;
+// switch (day) {
+// 	case 1:
+// 		console.log("Monday");
+// 		break;
+// 	case 2:
+// 		console.log("Tuesday");
+// 		break;
+// 	case 3:
+// 		console.log("Wednday");
+// 		break;
+// 	case 4:
+// 		console.log("Thuesday");
+// 		break;
+// 	case 5:
+// 		console.log("Friday");
+// 		break;
+// 	case 6:
+// 		console.log("Satureday");
+// 		break;
+// 	case 7:
+// 		console.log("Sunday");
+// 		break;
+// 	default:
+// 		break;
+// }
+
+// // Check whether a username is `"admin"` and password is `"1234"`.
+// let username = "adtmin"
+// let password = 12345
+// if (username == "admin" && password == 12345) {
+// 	console.log("This is user valid !");
+// } else {
+// 	console.log("This is not valid User !");
+
+// }
+
+//? Truthy & Falsy
+
+// Check whether an empty string is truthy or falsy.
+// console.log(Boolean("")); // yes ! empty srting is falsy.
+
+// Check whether `0` is truthy or falsy.
+// console.log(Boolean(0)); // yes ! 0 is falsy.
+
+// Check whether `[]` is truthy or falsy.
+// console.log(Boolean([])); // yes ! [] is true
+
+// // Create a variable and print `"Valid"` if it has a value otherwise print `"Invalid"`.
+// let data = "Govind";
+// if (data) {
+// 	console.log("Valid");
+// } else {
+// 	console.log("Not Valid");
+// }
+
+//? Ternary Operator
+
+// // Check whether a number is even or odd using ternary operator.
+// 8 % 2 === 0 ? console.log("even") : console.log("odd");
+
+// // Check whether age is above 18 using ternary operator.
+// let age = 18
+// console.log(age <= 18 ? "Yes" : "No");
+
+// // Find the greater number between two values using ternary operator.
+// let num1 = 85
+// let num2 = 55
+// console.log(num1 > num2 ? "number 1 is big": "number is 2 big");
 
 
 
-// Check whether a character is a vowel or consonant.
-// Create a calculator using `switch` statement.
-// Print the day name based on a number (1–7).
-// Check whether a username is `"admin"` and password is `"1234"`.
+//? Mixed Practice Questions
+
+// // Create a mini biodata program using variables and template literals.
+// let name = "krishna"
+// let city = "Vrindavan"
+// let Pincode = 369856
+// let age = 16
+// console.log(`My name is ${name}.and age is ${age}, too pincode ${Pincode}.so city is ${city}`);
+
+// Calculate the area of a rectangle.
+// Calculate the simple interest.
+// Convert temperature from Celsius to Fahrenheit.
+// Convert kilometers into meters.
+// Calculate total marks and percentage of 5 subjects.
+// Calculate electricity bill based on units consumed.
+// Create a username generator using first name and birth year.
+// Check whether a string starts with a specific letter.
+// 10. Count the total characters in a sentence excluding spaces.
+
+//? Logical Thinking Questions
+
+// Take two numbers and print which one is greater.
+// Check whether a number lies between 10 and 50.
+// Check whether a password length is greater than 8.
+// Check if a person can drive:
+// age > 18
+// has license = true
+// Check whether a number is divisible by 2, 3, or both.
+// Print `"Good Morning"`, `"Good Afternoon"`, or `"Good Evening"` based on time.
+// Find whether a number is a multiple of 10.
+// Create a simple discount calculator.
+// Check whether a product is in stock.
+// Calculate final bill after GST.
+
+//?  Challenge Questions for Beginners
+
+// Generate a random OTP of 4 digits.
+// Reverse a 3-letter string manually.
+// Find the last character of a string.
+// Convert a full name into uppercase initials.
+// Check whether two strings are equal ignoring case sensitivity.
+// Create a simple login validation system.
+// Find whether a number is a 2-digit or 3-digit number.
+// Create a mini ATM balance checker.
+// Simulate a traffic light system using `switch`.
+// Build a small marksheet generator using variables and conditionals.
