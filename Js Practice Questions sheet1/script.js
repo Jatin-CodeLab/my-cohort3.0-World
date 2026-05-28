@@ -596,26 +596,134 @@ console.log("Hare Krishna !");
 // if (time < 12) {
 //     console.log("morning")
 // } else if(time < 17){
-//    console.log("after") 
+//    console.log("after")
 // } else {
 //     console.log("evening")
 // }
 
+// // Find whether a number is a multiple of 10.
+// let n = 30;
+// if (n % 10 == 0) {
+// 	console.log("multiple of 10");
+// } else {
+// 	console.log("not multiple of 10");
+// }
 
-// Find whether a number is a multiple of 10.
-// Create a simple discount calculator.
-// Check whether a product is in stock.
+// // Create a simple discount calculator.
+// let amount = 2000;
+// let discount = 15;
+// let bill;
+// if (amount >= 2000) {
+// 	bill = (amount * discount) / 100;
+// 	amount = amount - bill;
+// 	console.log(amount);
+// } else {
+// 	console.log("Your bill lessthen 2000");
+// }
+
+// // Check whether a product is in stock.
+// let stock = true;
+// if (stock) {
+// 	console.log("Yes");
+// } else {
+// 	console.log("no");
+// }
+
 // Calculate final bill after GST.
+// let amount = 2000;
+// let gst = 15;
+// let bill;
+// if (amount >= 2000) {
+// 	bill = (amount * gst) / 100;
+// 	amount = amount + bill;
+// 	console.log(amount);
+// } else {
+// 	console.log("Your bill lessthen 2000");
+// }
 
 //?  Challenge Questions for Beginners
 
-// Generate a random OTP of 4 digits.
-// Reverse a 3-letter string manually.
-// Find the last character of a string.
-// Convert a full name into uppercase initials.
-// Check whether two strings are equal ignoring case sensitivity.
-// Create a simple login validation system.
-// Find whether a number is a 2-digit or 3-digit number.
-// Create a mini ATM balance checker.
-// Simulate a traffic light system using `switch`.
-// Build a small marksheet generator using variables and conditionals.
+// // Generate a random OTP of 4 digits.
+// let otp = Math.floor(1000 + Math.random() * 9000);
+// console.log(otp);
+
+// // Reverse a 3-letter string manually.
+// let str = "STR"
+// let rev = str[2] + str[1] + str[0];
+// console.log(rev);
+
+// // Find the last character of a string.
+// let strLast = "Krishna"
+// console.log(strLast[strLast.length - 1]);
+
+// // Convert a full name into uppercase initials.
+// let fullName = "Jatin Prajapati";
+// let initials = fullName[0] + fullName[6];
+// console.log(initials.toUpperCase());
+
+// // Check whether two strings are equal ignoring case sensitivity.
+// let str = "shna";
+// let str2 = "krishna";
+// if (str.toUpperCase() === str2.toUpperCase()) {
+// 	console.log("are equal");
+// } else {
+// 	console.log("not equal");
+// }
+
+// // Create a simple login validation system.
+// let user = 'k8ishna'
+// let password = 1234567890
+// if (user === "krishna" && password === password) {
+// 	console.log("Log in system is start !");
+// } else {
+// 	console.log("Log in system not proper ready !");
+// }
+
+// // Find whether a number is a 2-digit or 3-digit number.
+// let number = 250;
+// if (number >= 10 && number <= 99) {
+// 	console.log("2-digit number");
+// } else if (number >= 100 && number <= 999) {
+// 	console.log("3-digit number");
+// } else {
+// 	console.log("Other number");
+// }
+
+// // Create a mini ATM balance checker.
+// let atm = 50000;
+// let withdraw = 6000;
+// if (withdraw <= atm) {
+// 	atm = atm - withdraw;
+// 	console.log(atm);
+// } else {
+// 	console.log("you atm no money");
+// }
+
+// // Simulate a traffic light system using `switch`.
+// let light = "yellow"
+// switch (light) {
+// 	case "red":
+// 		console.log("All Vehicals are stop !");
+// 		break;
+// 	case "yellow":
+// 		console.log("All Vehicals are slow !");
+// 		break;
+// 	case "green":
+// 		console.log("Go !");
+// 		break;
+
+// 	default:
+// 		break;
+// }
+
+// // Build a small marksheet generator using variables and conditionals.
+// let marks = 78;
+// if (marks >= 90) {
+// 	console.log("Grade A");
+// } else if (marks >= 75) {
+// 	console.log("Grade B");
+// } else if (marks >= 50) {
+// 	console.log("Grade C");
+// } else {
+// 	console.log("Fail");
+// }   
