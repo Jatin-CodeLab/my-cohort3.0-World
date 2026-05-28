@@ -1,6 +1,5 @@
 console.log("Hare Krishna !");
 
-
 // ? JavaScript Beginner Practice Questions
 
 //? Console & Basics
@@ -472,8 +471,6 @@ console.log("Hare Krishna !");
 // let num2 = 55
 // console.log(num1 > num2 ? "number 1 is big": "number is 2 big");
 
-
-
 //? Mixed Practice Questions
 
 // // Create a mini biodata program using variables and template literals.
@@ -483,26 +480,128 @@ console.log("Hare Krishna !");
 // let age = 16
 // console.log(`My name is ${name}.and age is ${age}, too pincode ${Pincode}.so city is ${city}`);
 
-// Calculate the area of a rectangle.
-// Calculate the simple interest.
-// Convert temperature from Celsius to Fahrenheit.
-// Convert kilometers into meters.
-// Calculate total marks and percentage of 5 subjects.
-// Calculate electricity bill based on units consumed.
-// Create a username generator using first name and birth year.
-// Check whether a string starts with a specific letter.
-// 10. Count the total characters in a sentence excluding spaces.
+// // Calculate the area of a rectangle.
+// let l = 10
+// let w = 5
+// console.log(l*w);
+
+// // Calculate the simple interest.
+// let p = 1000
+// let r = 5
+// let t = 2
+// let si = (p * r * t) / 100
+// console.log(si);
+
+// // Convert temperature from Celsius to Fahrenheit.
+// let c = 30;
+// let f = (c * 9 / 5) + 32
+// console.log(f);
+
+// // Convert kilometers into meters.
+// let km = 5
+// let m = km * 1000
+// console.log(m);
+
+// // Calculate total marks and percentage of 5 subjects.
+// let html = 45
+// let css = 87
+// let js = 65
+// let python = 97
+// let coa = 97
+// let total = html + css + js + python + coa
+// console.log(`total mark is ${total}`);
+// let per = (total *  100) / 500
+// console.log(per);
+
+// // Calculate electricity bill based on units consumed.
+// let units = 45
+// let bill;
+// if (units <= 100) {
+// 	bill = units * 5
+// }
+// else {
+// 	bill = units * 8
+// }
+// console.log(bill);
+
+// // Create a username generator using first name and birth year.
+// let first_Name = "Manish"
+// let birth_year = 2005
+// console.log(`You UserName is { ${first_Name}_${birth_year}}`);
+
+// // Check whether a string starts with a specific letter.
+// let str = '&govind'
+// let first_letter = str[0]
+// if (first_letter == '!' || first_letter == '@' || first_letter == '#' || first_letter == '$' || first_letter == '^' || first_letter == '&') {
+// 	console.log("Yes, In this string in first letter is Specific letter : " + first_letter);
+// } else {
+// 	console.log("NO !");
+// }
+
+// // 10. Count the total characters in a sentence excluding spaces.
+// let sentence = 'hello world jatin rfhit jhdjnv gtk ok'
+// console.log(sentence.length);
 
 //? Logical Thinking Questions
 
-// Take two numbers and print which one is greater.
-// Check whether a number lies between 10 and 50.
-// Check whether a password length is greater than 8.
-// Check if a person can drive:
-// age > 18
-// has license = true
-// Check whether a number is divisible by 2, 3, or both.
-// Print `"Good Morning"`, `"Good Afternoon"`, or `"Good Evening"` based on time.
+// // Take two numbers and print which one is greater.
+// let n1 = 45;
+// let n2 = 65;
+// if (n1 > n2) {
+// 	console.log("Number is big");
+// } else {
+// 	console.log("number 2 is big");
+// }
+
+// // Check whether a number lies between 10 and 50.
+// let n1 = 45
+// if (n1 >= 10 && n1 <= 50) {
+// 	console.log("number is between 10 ans 50");
+// } else {
+// 	console.log("Not");
+// }
+
+// // Check whether a password length is greater than 8.
+// let password = "082905J2"
+// let length = password.length
+// if (length >= 8 ) {
+//     console.log("Strong Password !")
+// } else {
+//     console.log("Weeek password !")
+// }
+
+// // Check if a person can drive:
+// // -- age > 18
+// // -- has license = true
+// let age = 18
+// let license = true
+// if (age >= 18 && license) {
+//     console.log("You drive well")
+// } else {
+//     console.log("No drive a car")
+// }
+
+// // Check whether a number is divisible by 2, 3, or both.
+// let n = 6;
+// if (n % 2 == 0) {
+// 	if (n % 3 == 0) {
+// 		console.log("yes");
+// 	}
+// } else {
+// 	console.log("no");
+// }
+
+// // Print `"Good Morning"`, `"Good Afternoon"`, or `"Good Evening"` based on time.
+// let time = new Date().getHours();
+// if (time < 12) {
+//     console.log("morning")
+// } else if(time < 17){
+//    console.log("after") 
+// } else {
+//     console.log("evening")
+// }
+
+
 // Find whether a number is a multiple of 10.
 // Create a simple discount calculator.
 // Check whether a product is in stock.
