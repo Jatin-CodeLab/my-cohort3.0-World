@@ -2,29 +2,169 @@ console.log("Hare Krishna !");
 
 //? Beginner Level
 
-// Create a function named `greet` that prints `"Hello World"`.
-// Create a function `add(a, b)` that returns the sum.
-// Write a function to calculate the square of a number.
-// Create a function that checks whether a number is even or odd.
-// Write a function that converts Celsius to Fahrenheit.
-// Create a function with default parameter `"Guest"`.
-// Write a function that returns the greater of two numbers.
-// Create a function to calculate area of rectangle.
-// Write a function that returns `"Adult"` if age ≥ 18 else `"Minor"`.
-// Create a function to reverse a string.
+// // Create a function named `greet` that prints `"Hello World"`.
+// let greet = () => {
+//     console.log("Hare Krishna");
+// }
+// greet()
+
+// // Create a function `add(a, b)` that returns the sum.
+// let f = (a, b) => {
+//     return console.log(a + b);
+// }
+// f(5,5)
+
+// // Write a function to calculate the square of a number.
+// let f = (a) => {
+//     return console.log(a * a);
+// }
+// f(5)
+
+// // Create a function that checks whether a number is even or odd.
+// let check = (n) => {
+//     if (n % 2 === 0) {
+//         console.log("Even");
+//     }
+//     else {
+//         console.log("Odd");
+//     }
+// }
+// check(10)
+
+// // Write a function that converts Celsius to Fahrenheit.
+// let Celsius = (celsius) => {
+// 	return console.log((celsius * 9) / 5 + 32);
+// };
+// Celsius(25)
+
+// // Create a function with default parameter `"Guest"`.
+// let n = (name = "Jatin") => {
+// console.log(name);
+// }
+// n("krishna")
+
+// // Write a function that returns the greater of two numbers.
+// let check = (n,n1) => {
+//     if (n > n1) {
+//         return console.log("Num 1 is");
+//     } else {
+//         return console.log("Num 2 is");
+//     }
+// }
+// check(1,23)
+
+// // Create a function to calculate area of rectangle.
+// let cal = (w,h) => {
+//     a = w * h
+//     return console.log(a);
+// }
+// cal(23,18)
+
+// // Write a function that returns `"Adult"` if age ≥ 18 else `"Minor"`.
+// let ageCheck = (age) => {
+//     if (age >= 18) {
+//         console.log("you are adult");
+//     } else {
+//         console.log("you are minor");
+
+//     }
+// }
+// ageCheck(17)
+
+// // Create a function to reverse a string.
+// let str = (str) => {
+//      return console.log(str.split("").reverse().join(""));
+// }
+// str("krishna")
 
 //? Intermediate Level
 
-// Write a function expression for multiplication.
-// Convert a normal function into an arrow function.
-// Create a function that accepts unlimited numbers and returns their sum using rest operator.
-// Write a function that counts vowels in a string.
-// Create a function that checks if a string is palindrome.
-// Write a callback function example using `setTimeout`.
-// Create a higher-order function that executes another function twice.
-// Write a function that returns another function.
-// Create a pure function for subtraction.
-// Create an impure function using global variable modification.
+// // Write a function expression for multiplication.
+// let multiplication = (a,b) => {
+//     return console.log(a * b);
+// }
+// multiplication(2,3)
+
+// // Convert a normal function into an arrow function.
+// function sum(a, b) {
+// 	return console.log(a + b);
+// }
+// sum(1, 2);
+
+// // Create a function that accepts unlimited numbers and returns their sum using rest operator.
+// let loop = (...n) => {
+// 	let total = 0;
+// 	for (number of n) {
+// 		total += number;
+// 	}
+// 	return console.log(total);
+// };
+// loop(1, 2, 3, 4, 5);
+
+// // Write a function that counts vowels in a string.
+// let count = 0;
+// let vowels =  "aeiouAEIOU"
+// let check = (str) => {
+//     for (string of str) {
+//         if (vowels.includes(string)) {
+// 					count++;
+// 				}
+//     }
+//     return console.log(count);
+// }
+// check("JavaScript")
+
+// // Create a function that checks if a string is palindrome.
+// let checks = (str) => {
+// 	let rev = str.split("").reverse().join("");
+// 	if (rev === str) {
+// 		console.log("yes");
+// 	} else {
+// 		console.log("no");
+// 	}
+// };
+// checks("ajja");
+
+// // Write a callback function example using `setTimeout`.
+// function greet() {
+//     console.log("Call back function");
+// }
+// setTimeout(greet, 3000)
+
+// // Create a higher-order function that executes another function twice.
+// let perent = (child) => {
+//     child()
+//     child()
+// }
+// let child = () => {
+//     console.log("Hare Krishna");
+// }
+// perent(child)
+
+// // Write a function that returns another function.
+// let a = () => {
+//     console.log("One Function !");
+//     return () => {
+//             console.log("Two Function !");
+//         }
+// }
+// let b = a()
+// b()
+
+// // Create a pure function for subtraction.
+// function subtraction(a,b) {
+//     return a-b
+// }
+// console.log(subtraction(23,34));
+
+// // Create an impure function using global variable modification.
+// let total = 0;
+// let function12 = (num) => {
+//     total = total + num
+//     return total
+// }
+// console.log(function12(12))
+// console.log(function12(12));
 
 //? Advanced Functions
 
