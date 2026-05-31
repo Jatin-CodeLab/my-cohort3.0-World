@@ -168,8 +168,26 @@ console.log("Hare Krishna !");
 
 //? Advanced Functions
 
-// Write a recursive function for factorial.
-// Write recursive Fibonacci function.
+// // Write a recursive function for factorial.
+// function factorial(n) {
+//     if (n === 0 || n === 1) {
+//         return 1;
+//     }
+//     return n * (factorial(n-1))
+// }
+// console.log(factorial(5));
+
+
+// // Write recursive Fibonacci function.
+// function Fibonacci(n) {
+//     if (n <= 1) {
+//         return n
+//     }
+//     return Fibonacci(n-1) + Fibonacci(n-2)
+// }
+// console.log(Fibonacci(6));
+
+
 // Create a function that finds power using recursion.
 // Create an IIFE that prints `"Executed"`.
 // Write a function that memoizes factorial calculation.
