@@ -188,7 +188,19 @@ console.log("Hare Krishna !");
 // console.log(Fibonacci(6));
 
 
-// Create a function that finds power using recursion.
+// // Create a function that finds power using recursion.
+// function power(num, times) {
+//     if (times === 0) {
+// 			return 1;
+//     }
+//     console.log(num);
+    
+//     return num ** times
+    
+// }
+// console.log(power(2, 3));
+
+
 // Create an IIFE that prints `"Executed"`.
 // Write a function that memoizes factorial calculation.
 // Create a closure counter function.
