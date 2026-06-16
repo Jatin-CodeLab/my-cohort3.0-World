@@ -4,34 +4,36 @@ let randomBox = document.querySelector("#taapBoxOnRandom");
 let startBtn = document.querySelector("#startBtn");
 let timer = document.querySelector("#timer");
 let score = document.querySelector("#score");
+let overlay = document.querySelector("#overlay");
 let time = 0;
 let timeTimer;
+const box = document.createElement("div");
+box.classList.add("taapBox");
 
 startBtn.addEventListener("click", () => {
-	// Button disable kar do
+	boxMain.append(box); // 👈 Yahan likho
 	startBtn.disabled = true;
-	startBtn.textContent = "Running...";
+	startBtn.textContent = "Tap circle";
 
-	// Timer reset
 	time = 0;
 	timer.textContent = `Timer : ${time}`;
 
-timeTimer = setInterval(() => {
+	timeTimer = setInterval(() => {
+		let mainH = boxMain.clientHeight - box.offsetHeight;
+		let mainW = boxMain.clientWidth - box.offsetWidth;
 		time += 1;
 		timer.textContent = `Timer : ${time}`;
 
-		// Random position
-		let X = Math.random() * 90;
-		let Y = Math.random() * 90;
+		let X = Math.random() * mainH;
+		let Y = Math.random() * mainW;
 
-		randomBox.style.top = `${X}%`;
-		randomBox.style.left = `${Y}%`;
+		box.style.top = `${X}px`;
+		box.style.left = `${Y}px`;
 	}, 1000);
 
-	// 10 second baad sab band
 	setTimeout(() => {
 		clearInterval(timeTimer);
-
+        overlay.style.display = "flex"
 		startBtn.disabled = false;
 		startBtn.textContent = "Start";
 	}, 10000);
