@@ -129,7 +129,9 @@ body {
     display: none;
     background-color: rgba(0, 0, 0, 0.783);
 }
-
+.taapBox{
+	transition: transform 0.3s ease;
+}
 
 
 
