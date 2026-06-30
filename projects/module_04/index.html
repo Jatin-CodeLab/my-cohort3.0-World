@@ -5,14 +5,62 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Fintrack Pro - Personal Finance tracker</title>
 		<link rel="stylesheet" href="./style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+			integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/4.0.0/uicons-thin-rounded/css/uicons-thin-rounded.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/4.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-straight/css/uicons-solid-straight.css"
+		/><link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
 	</head>
 	<body>
 		<div class="main1">
 			<div class="container">
-				<aside class="sidebar"></aside>
+				<aside class="sidebar">
+					<div class="logo">
+						<i class="fa-solid fa-layer-group"></i>
+						<div>
+							<h1>FinTrack Pro</h1>
+							<p>Enterprise Finance</p>
+						</div>
+					</div>
+					<div class="features">
+						<div class="settings">
+							<button><i class="fi fi-tr-dashboard-panel"></i>Dashboard</button>
+							<button><i class="fi fi-rr-settings"></i>settings</button>
+						</div>
+						<div class="btn">
+							<i class="fa-solid fa-plus" style="color: rgb(255, 255, 255)"></i>
+							<p>Add Transaction</p>
+						</div>
+					</div>
+				</aside>
 
 				<main class="main">
-					<nav class="navbar"></nav>
+					<nav class="navbar">
+						<div class="nameBtn">
+							<p>Jatin</p>
+							<button>
+								<i class="fi fi-br-sign-out-alt"></i><span>Logout</span>
+							</button>
+						</div>
+					</nav>
 
 					<section class="heading">
 						<h1>Financial Overview</h1>
@@ -20,14 +68,29 @@
 					</section>
 
 					<section class="cards">
-                        <div class="c one">
-                            <div class="icon"></div>
-                            <div class="amount"></div>
-                        </div>
-                        <div class="c two"></div>
-                        <div class="c three"></div>
-                        <div class="c four"></div>
-                    </section>
+						<div class="c one">
+							<div class="icon"><i class="fi fi-ss-bank"></i></div>
+							<div class="amount">
+								<p>Current Balance</p>
+								<h1>$0.00</h1>
+							</div>
+						</div>
+						<div class="c two"><div class="icon"><i class="fi fi-rs-arrow-trend-up"></i></div>
+							<div class="amount">
+								<p>Current Balance</p>
+								<h1>$0.00</h1>
+							</div></div>
+						<div class="c three"><div class="icon"><i class="fi fi-rs-arrow-trend-down"></i></div>
+							<div class="amount">
+								<p>Current Balance</p>
+								<h1>$0.00</h1>
+							</div></div>
+						<div class="c four"><div class="icon"><i class="fi fi-ss-piggy-bank"></i></div>
+							<div class="amount">
+								<p>Current Balance</p>
+								<h1>$0.00</h1>
+							</div></div>
+					</section>
 
 					<div class="dashboard-content">
 						<div class="chart">Chart</div>
