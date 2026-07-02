@@ -44,6 +44,14 @@ form {
 	.heading {
 		color: white;
 	}
+
+	.heading{display: flex;
+		gap: .5rem;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+		text-align: center;
+	}
     .inputs{
         width: 100%;
         display: flex;
@@ -71,5 +79,17 @@ form {
         font-weight: 700;
         color: white;
     }
+	
     }
+	p{
+		color: white;
+		a{
+			color: rgb(152, 131, 255);
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
 }
+
+
