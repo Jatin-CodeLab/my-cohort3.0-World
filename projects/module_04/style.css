@@ -55,6 +55,8 @@ body {
 }
 .products {
 	display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 	height: 100%;
 	width: 100%;
 	button {
