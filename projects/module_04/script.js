@@ -2,13 +2,13 @@ let createProduct = document.querySelector("#cretaeProductLargeScreenBtn");
 let openForm = document.querySelector("#fillTheForm");
 let closeForm = document.querySelector(".close");
 let orignalForm = document.querySelector("form");
-let productsArr = [];
+let productsArr = JSON.parse(localStorage.getItem("products")) || [];
 let products = document.querySelector(".products");
 let updateIndex = null;
 let uiUpdateation = () => {
-    products.innerHTML = "";
-    productsArr.forEach((eventProduct,index) => {
-        products.innerHTML += `<div class="product-cards">
+	products.innerHTML = "";
+	productsArr.forEach((eventProduct, index) => {
+		products.innerHTML += `<div class="product-cards">
 					<div class="img">
 						<img
 							src="${eventProduct.productUrl}"
@@ -26,9 +26,9 @@ let uiUpdateation = () => {
 <button onclick="deleteProduct('${index}')" id="delete">Delete</button>
 					</div>
 				</div>`;
-    })
+	});
 };
-
+uiUpdateation();
 createProduct.addEventListener("click", () => {
 	openForm.style.display = "flex";
 });
@@ -55,8 +55,10 @@ orignalForm.addEventListener("submit", (e) => {
 	if (updateIndex !== null) {
 		productsArr[updateIndex] = productObject;
 		updateIndex = null;
+		localStorage.setItem("products", JSON.stringify(productsArr));
 	} else {
 		productsArr.push(productObject);
+		localStorage.setItem("products", JSON.stringify(productsArr));
 	}
 
 	uiUpdateation();
@@ -76,35 +78,32 @@ let updateProduct = (name) => {
 };
 
 let deleteProduct = (index) => {
-    productsArr.splice(index, 1)
-    uiUpdateation()
-    console.log('DELETED PRODUCT !');
-    
-}
+	productsArr.splice(index, 1);
+	localStorage.setItem("products", JSON.stringify(productsArr));
+	uiUpdateation();
+};
 
-let data = [
-	{
-		name: "krishna",
-		age: 21,
-		pincode: 562187,
-	},
-	{
-		name: "Govind",
-		age: 23,
-		pincode: 852145,
-	},
-	{
-		name: "Madhava",
-		age: 32,
-		pincode: 963542,
-	},
-];
+// let data = [
+// 	{
+// 		name: "krishna",
+// 		age: 21,
+// 		pincode: 562187,
+// 	},
+// 	{
+// 		name: "Govind",
+// 		age: 23,
+// 		pincode: 852145,
+// 	},
+// 	{
+// 		name: "Madhava",
+// 		age: 32,
+// 		pincode: 963542,
+// 	},
+// ];
 
-let convert = JSON.stringify(data)
-localStorage.setItem("pritamkanaam", convert);
+// let convert = JSON.stringify(data)
+// localStorage.setItem("pritamkanaam", convert);
 
-let dataShow = localStorage.getItem("pritamkanaam");
+// let dataShow = localStorage.getItem("pritamkanaam");
 
-console.log(JSON.parse(dataShow));
-
-
+// console.log(dataShow);
