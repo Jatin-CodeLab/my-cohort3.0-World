@@ -35,6 +35,7 @@ main {
 		background-color: white;
 		padding: 2rem;
 		display: flex;
+		border-right: 1px solid rgba(0, 0, 0, 0.149);
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
@@ -71,6 +72,45 @@ main {
 		}
 	}
 	.right-side {
+		overflow-y: scroll;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		/* padding: .1rem; */
+
+		.navbaar {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.149);
+
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 1rem 1rem;
+			background-color: white;
+
+			.name {
+				h1{
+					font-size: 1.5rem;
+				}
+			}
+			.btns {
+				display: flex;
+				gap: 1rem;
+
+				button {
+					padding: 0.5rem 1rem;
+					font-size: 1rem;
+					border: 1px solid rgba(0, 0, 0, 0.138);
+					background-color: white;
+					border-radius: 8px;
+					text-transform: capitalize;
+
+					&:hover {
+						background-color: black;
+						color: white;
+					}
+				}
+			}
+		}
 		.alltransactionShow {
 			width: auto;
 			height: auto;
@@ -162,6 +202,12 @@ main {
 					}
 				}
 			}
+		}
+		.allTransactionChart {
+			padding: 1rem;
+			background-color: white;
+			width:  50%;
+			height: 50%;
 		}
 	}
 }

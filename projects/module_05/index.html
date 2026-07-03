@@ -13,7 +13,7 @@
 			href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="./style.css" /><script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	</head>
 	<body>
 		<main>
@@ -39,6 +39,18 @@
 				</div>
 			</div>
 			<div class="right-side">
+				<div class="navbaar">
+					<div class="name">
+						<h1>Gesut</h1>
+					</div>
+					<div class="btns">
+						<button>logout</button>
+						<button>reset Transactions</button>
+					</div>
+				</div>
+				<div class="allTransactionChart">
+<canvas id="myChart"></canvas>
+				</div>
 				<div class="alltransactionShow">
 					<h1>All Transactions</h1>
 					<div class="searchFillter">
@@ -66,6 +78,7 @@
 						</table>
 					</div>
 				</div>
+				
 			</div>
 
 			<!-- // hiden Part -->

@@ -89,8 +89,38 @@ close.addEventListener("click", () => {
 	showHideForm.style.display = "none";
 });
 
-// date functionalitys
 
 
+const ctx = document.getElementById("myChart");
 
-// responsive 1 = 1030px
+new Chart(ctx, {
+	type: "bar",
+
+	data: {
+		labels: ["Income vs Expense"],
+
+		datasets: [
+			{
+				label: "Income",
+				data: [100],
+				backgroundColor: "green",
+			},
+			{
+				label: "Expense",
+				data: [250],
+				backgroundColor: "red",
+			},
+		],
+	},
+});
+
+let income = 0;
+let expense = 0;
+
+transactionDetailsArr.forEach((item) => {
+	if (item.type === "Income") {
+		income += Number(item.amount);
+	} else {
+		expense += Number(item.amount);
+	}
+});
