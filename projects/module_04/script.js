@@ -81,3 +81,30 @@ let deleteProduct = (index) => {
     console.log('DELETED PRODUCT !');
     
 }
+
+let data = [
+	{
+		name: "krishna",
+		age: 21,
+		pincode: 562187,
+	},
+	{
+		name: "Govind",
+		age: 23,
+		pincode: 852145,
+	},
+	{
+		name: "Madhava",
+		age: 32,
+		pincode: 963542,
+	},
+];
+
+let convert = JSON.stringify(data)
+localStorage.setItem("pritamkanaam", convert);
+
+let dataShow = localStorage.getItem("pritamkanaam");
+
+console.log(JSON.parse(dataShow));
+
+
