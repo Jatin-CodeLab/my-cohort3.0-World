@@ -5,15 +5,19 @@ let addForm = document.querySelector("#addForm");
 let close = document.querySelector("#close");
 let tbody = document.querySelector("tbody");
 let type, discription, amount, date, category;
-let transactionDetailsArr = []
-let updateIndex = null
-
+let transactionDetailsArr =
+	JSON.parse(localStorage.getItem("transactionData")) || [];
+let updateIndex = null;
+let currentBalance = document.getElementById("currentBalance");
+let totalIncome = document.getElementById("totalIncome");
+let totalExpense = document.getElementById("totalExpense");
+let totalTransactions = document.getElementById("totalTransactions");
 
 const today = new Date().toISOString().split("T")[0];
 dateInput.value = today;
 let uiUpdateation = () => {
 	tbody.innerHTML = "";
-	transactionDetailsArr.forEach((elem) => {
+	transactionDetailsArr.forEach((elem,index) => {
 		tbody.innerHTML += `<tr>
 									<td>${elem.date}</td>
 									<td>${elem.discription}</td>
@@ -22,12 +26,11 @@ let uiUpdateation = () => {
 									<td class="income">${elem.type}</td>
 									<td class="editAndDelete">
 										<button onclick="update('${elem.date}')"><i class="ri-edit-2-line"></i></button
-										><button onclick="deleteT('${elem.date}')"><i class="ri-delete-bin-4-line"></i></button>
+										><button onclick="deleteT('${index}')"><i class="ri-delete-bin-4-line"></i></button>
 									</td>
 								</tr>`;
 	});
 };
-
 
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
@@ -40,47 +43,50 @@ form.addEventListener("submit", (e) => {
 		category: e.target[4].value,
 	};
 
-
 	if (updateIndex !== null) {
-		transactionDetailsArr[updateIndex] = formObj
-		updateIndex = null
-		
+		transactionDetailsArr[updateIndex] = formObj;
+		updateIndex = null;
+		localStorage.setItem(
+			"transactionData",
+			JSON.stringify(transactionDetailsArr),
+		);
 	} else {
-		transactionDetailsArr.push(formObj)
+		transactionDetailsArr.push(formObj);
+		localStorage.setItem(
+			"transactionData",
+			JSON.stringify(transactionDetailsArr),
+		);
 	}
 
-	
-uiUpdateation();
+	uiUpdateation();
 	form.reset();
 	showHideForm.style.display = "none";
 });
 
-
 let update = (date) => {
-	showHideForm.style.display = "flex";	
-	let fillForm = transactionDetailsArr.find((item) => item.date === date)
+	showHideForm.style.display = "flex";
+	let fillForm = transactionDetailsArr.find((item) => item.date === date);
 	updateIndex = transactionDetailsArr.findIndex((item) => item.date === date);
 
-	form[0].value = fillForm.type
-	form[1].value = fillForm.discription
-	form[2].value = fillForm.amount
-	form[3].value = fillForm.date
-	form[4].value = fillForm.category
+	form[0].value = fillForm.type;
+	form[1].value = fillForm.discription;
+	form[2].value = fillForm.amount;
+	form[3].value = fillForm.date;
+	form[4].value = fillForm.category;
 };
-let deleteT = (index) => {
-	transactionDetailsArr.splice(index, 1);
+let deleteT = (date) => {
+	let index = transactionDetailsArr.findIndex((item) => item.date === date);
+
+		transactionDetailsArr.splice(index, 1);
+
+
+	localStorage.setItem(
+		"transactionData",
+		JSON.stringify(transactionDetailsArr),
+	);
+
 	uiUpdateation();
-	console.log("DELETED PRODUCT !");
 };
-
-
-
-
-
-
-
-
-
 
 addForm.addEventListener("click", () => {
 	showHideForm.style.display = "flex";
@@ -88,8 +94,6 @@ addForm.addEventListener("click", () => {
 close.addEventListener("click", () => {
 	showHideForm.style.display = "none";
 });
-
-
 
 const ctx = document.getElementById("myChart");
 
