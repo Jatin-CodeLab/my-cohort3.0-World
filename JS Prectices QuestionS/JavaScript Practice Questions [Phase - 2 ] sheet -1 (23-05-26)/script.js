@@ -177,7 +177,6 @@ console.log("Hare Krishna !");
 // }
 // console.log(factorial(5));
 
-
 // // Write recursive Fibonacci function.
 // function Fibonacci(n) {
 //     if (n <= 1) {
@@ -187,25 +186,73 @@ console.log("Hare Krishna !");
 // }
 // console.log(Fibonacci(6));
 
-
 // // Create a function that finds power using recursion.
 // function power(num, times) {
 //     if (times === 0) {
 // 			return 1;
 //     }
 //     console.log(num);
-    
+
 //     return num ** times
-    
+
 // }
 // console.log(power(2, 3));
 
+// // Create an IIFE that prints `"Executed"`.
+// (function () {
+// 	console.log("Executed");
+// })();
 
-// Create an IIFE that prints `"Executed"`.
-// Write a function that memoizes factorial calculation.
-// Create a closure counter function.
-// Write a function currying example for addition.
+// // Write a function that memoizes factorial calculation.
+// function memoizesFactorial() {
+// 	let c = {};
+// 	return function (n) {
+// 		if (c[n]) {
+// 			console.log("form c");
+// 			return c[n];
+// 		}
+
+// 		let result = 1;
+// 		for (let i = 1; i <= n; i++) {
+// 			result *= i;
+// 		}
+
+// 		c[n] = result;
+// 		console.log("calculated !");
+
+// 		return result;
+// 	};
+// }
+// let f = memoizesFactorial();
+// console.log(f(5));
+
+// // Create a closure counter function.
+// let closureFunction = () => {
+//     let count = 0
+
+//     return function increments() {
+//         count++;
+//           console.log(count);
+
+//     }
+// }
+// let i = closureFunction();
+// i()
+// i()
+// i()
+
+// // Write a function currying example for addition.
+// function add(a) {
+// 	return function (b) {
+// 		return a + b;
+// 	};
+// }
+// console.log(add(10)(20));
+
 // Create debounce function logic.
+
+
+
 // Create throttle function logic.
 // Write a function that executes only once.
 // Create custom implementation of `map`.
