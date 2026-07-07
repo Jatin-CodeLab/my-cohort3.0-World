@@ -66,9 +66,7 @@ themeBtn.addEventListener("click", function () {
 	}
 });
 
-// ==========================
 // Select Elements
-// ==========================
 
 let taskInput = document.getElementById("taskInput");
 let addTaskBtn = document.getElementById("addTaskBtn");
@@ -78,15 +76,11 @@ let totalTask = document.getElementById("totalTask");
 let completedTask = document.getElementById("completedTask");
 let importantTask = document.getElementById("importantTask");
 
-// ==========================
 // Local Storage
-// ==========================
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-// ==========================
 // Show Tasks
-// ==========================
 
 showTasks();
 
@@ -136,9 +130,7 @@ function showTasks() {
 	updateCounter();
 }
 
-// ==========================
 // Add Task
-// ==========================
 
 function addTask() {
 	let text = taskInput.value.trim();
@@ -178,9 +170,7 @@ taskInput.addEventListener("keypress", function (e) {
 	}
 });
 
-// ==========================
 // Delete
-// ==========================
 
 function deleteTask(index) {
 	tasks.splice(index, 1);
@@ -190,9 +180,7 @@ function deleteTask(index) {
 	showTasks();
 }
 
-// ==========================
 // Complete
-// ==========================
 
 function completeTask(index) {
 	tasks[index].completed = !tasks[index].completed;
@@ -202,9 +190,7 @@ function completeTask(index) {
 	showTasks();
 }
 
-// ==========================
 // Important
-// ==========================
 
 function importantTaskToggle(index) {
 	tasks[index].important = !tasks[index].important;
@@ -214,9 +200,7 @@ function importantTaskToggle(index) {
 	showTasks();
 }
 
-// ==========================
 // Counter
-// ==========================
 
 function updateCounter() {
 	totalTask.innerHTML = tasks.length;
@@ -240,17 +224,13 @@ function updateCounter() {
 	importantTask.innerHTML = important;
 }
 
-// ==========================
 // Save Local Storage
-// ==========================
 
 function saveTask() {
 	localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-// ==============================
 // Daily Planner JavaScript
-// ==============================
 
 // Select All Inputs
 
@@ -260,9 +240,7 @@ let plannerInputs = document.querySelectorAll(".plannerInput");
 
 let saveBtns = document.querySelectorAll(".saveBtn");
 
-// ==============================
 // Load Data
-// ==============================
 
 window.addEventListener("load", function () {
 	plannerInputs.forEach(function (input) {
@@ -276,9 +254,7 @@ window.addEventListener("load", function () {
 	});
 });
 
-// ==============================
 // Save Data
-// ==============================
 
 saveBtns.forEach(function (button, index) {
 	button.addEventListener("click", function () {
@@ -300,9 +276,7 @@ saveBtns.forEach(function (button, index) {
 	});
 });
 
-// ==============================
 // Enter Key Save
-// ==============================
 
 plannerInputs.forEach(function (input) {
 	input.addEventListener("keypress", function (event) {
@@ -324,10 +298,10 @@ plannerInputs.forEach(function (input) {
 	});
 });
 
-// ==============================
+
 // Clear One Slot (Optional)
 // Double Click Input
-// ==============================
+
 
 plannerInputs.forEach(function (input) {
 	input.addEventListener("dblclick", function () {
