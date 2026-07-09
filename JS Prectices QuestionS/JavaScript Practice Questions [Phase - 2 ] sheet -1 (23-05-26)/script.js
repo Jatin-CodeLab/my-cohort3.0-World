@@ -249,45 +249,242 @@ console.log("Hare Krishna !");
 // }
 // console.log(add(10)(20));
 
-// Create debounce function logic.
+// // Create debounce function logic.
+// function debounceSearch(func, dely) {
+// 	let timer;
 
+// 	return function (...args) {
+// 		clearTimeout(timer);
+// 		timer = setTimeout(() => {
+// 			func(...args);
+// 		},dely);
+// 	};
+// }
+// function search(value) {
+// 	console.log("Search value : ", value);
+// }
+// let debounceSearchText = debounceSearch(search, 5000);
 
+// debounceSearchText("j");
+// debounceSearchText("ja");
+// debounceSearchText("jat");
+// debounceSearchText("jati");
+// debounceSearchText("jatin");
 
-// Create throttle function logic.
-// Write a function that executes only once.
-// Create custom implementation of `map`.
-// Create custom implementation of `filter`.
-// Create custom implementation of `reduce`.
-// Create custom `forEach`.
-// Explain output:
+// // Create throttle function logic.
+// function throttle(func, dely) {
+// 	let canRun = true;
+
+// 	return function (...args) {
+// 		if (!canRun) return;
+// 		func(...args);
+// 		canRun = false;
+// 		setTimeout(() => {
+// 			canRun = true;
+// 		}, dely);
+// 	};
+// }
+
+// function click() {
+// 	console.log("click");
+// }
+
+// let callTheFunction = throttle(click, 1000);
+
+// callTheFunction();
+
+// // Write a function that executes only once.
+// function once(func) {
+// 	let executed = false;
+
+// 	return function (...args) {
+// 		if (executed) {
+// 			return;
+// 		}
+
+// 		executed = true;
+
+// 		return func(...args);
+// 	};
+// }
+
+// const greet = once(function () {
+// 	console.log("Hello");
+// });
+
+// greet();
+// greet();
+// greet();
+
+// // Create custom implementation of `map`.
+// Array.prototype.myMap = function (callback) {
+// 	let result = [];
+// 	for (let i = 0; i < this.length; i++) {
+// 		result.push(callback(this[i], i, this));
+// 	}
+// 	return result;
+// };
+// const arr = [1, 2, 3];
+// const ans = arr.myMap((num) => num * 2);
+// console.log(ans);
+
+// // Create custom implementation of `filter`.
+// Array.prototype.myFilter = function (callback) {
+// 	let result = [];
+
+// 	for (let i = 0; i < this.length; i++) {
+// 		if (callback(this[i], i, this)) {
+// 			result.push(this[i]);
+// 		}
+// 	}
+
+// 	return result;
+// };
+
+// const arr = [1, 2, 3, 4, 5];
+
+// console.log(arr.myFilter((num) => num % 2 === 0));
+
+// // Create custom implementation of `reduce`.
+// Array.prototype.myReduce = function (callback, initialValue) {
+// 	let accumulator = initialValue;
+
+// 	for (let i = 0; i < this.length; i++) {
+// 		accumulator = callback(accumulator, this[i]);
+// 	}
+
+// 	return accumulator;
+// };
+
+// const arr = [1, 2, 3, 4];
+
+// const sum = arr.myReduce((acc, curr) => acc + curr, 0);
+
+// console.log(sum);
+
+// // Create custom `forEach`.
+// Array.prototype.myForEach = function (callback) {
+// 	for (let i = 0; i < this.length; i++) {
+// 		callback(this[i], i, this);
+// 	}
+// };
+
+// const arr = [10, 20, 30];
+
+// arr.myForEach((num, index) => {
+// 	console.log(index, num);
+// });
+
+// // Explain output:
 //  function test() {
 //      return;
 //      console.log("Hello");
 // }
 // console.log(test());
+// Function start huaa or return ho gaya
+// Function end ho gaya
+// or console.log('hello') kabhi execute hi nahi huaa
+// JavaScript return ke baad wali line kabhi execute nahi karta.
 
 //? Arrays Basics : Beginner || Intermediate
 
-// Create an array of 5 fruits.
-// Print first and last element of array.
-// Find length of array.
-// Add element at end using `push`.
-// Remove last element using `pop`.
-// Add element at beginning using `unshift`.
-// Remove first element using `shift`.
-// Reverse an array.
-// Sort numbers ascending.
-// Sort numbers descending.
-// Use `splice` to remove elements.
-// Use `splice` to insert elements.
-// Use `slice` to copy array.
-// Find index of an element.
-// Check if array contains a value.
-// Join array elements with .
-// Merge two arrays using spread operator.
-// Copy array using spread operator.
-// Find maximum value using `Math.max`.
-// Swap two variables using destructuring.
+// // Create an array of 5 fruits.
+// const fruits = ["Apple", "Banana", "Mango", "Orange", "Grapes"];
+// console.log(fruits);
+
+// // Print first and last element of array.
+// const fruits = ["Apple", "Banana", "Mango", "Orange", "Grapes"];
+// console.log(fruits[0]);
+// console.log(fruits[fruits.length - 1]);
+
+// // Find length of array.
+// const fruits = ["Apple", "Banana", "Mango", "Orange", "Grapes"];
+// console.log(fruits.length);
+
+// // Add element at end using `push`.
+// const fruits = ["Apple", "Banana", "Mango"];
+// fruits.push("Orange");
+// console.log(fruits);
+
+// // Remove last element using `pop`.
+// const fruits = ["Apple", "Banana", "Mango"];
+// fruits.pop();
+// console.log(fruits);
+
+// // Add element at beginning using `unshift`.
+// const fruits = ["Banana", "Mango"];
+// fruits.unshift("Apple");
+// console.log(fruits);
+
+// // Remove first element using `shift`.
+// const fruits = ["Apple", "Banana", "Mango"];
+// fruits.shift();
+// console.log(fruits);
+
+// // Reverse an array.
+// const numbers = [1, 2, 3, 4, 5];
+// numbers.reverse();
+// console.log(numbers);
+
+// // Sort numbers ascending.
+// const numbers = [10, 2, 5];
+// numbers.sort((a, b) => a - b);
+// console.log(numbers);
+
+// // Sort numbers descending.
+// const numbers = [10, 2, 5];
+// numbers.sort((a, b) => b - a);
+// console.log(numbers);
+
+// // Use `splice` to remove elements.
+// const fruits = ["Apple", "Banana", "Mango", "Orange"];
+// fruits.splice(1, 2);
+// console.log(fruits);
+
+// // Use `splice` to insert elements.
+// const fruits = ["Apple", "Orange"];
+// fruits.splice(1, 0, "Banana", "Mango");
+// console.log(fruits);
+
+// // Use `slice` to copy array.
+// const fruits = ["Apple", "Banana", "Mango", "Orange"];
+// const copy = fruits.slice();
+// console.log(copy);
+
+// // Find index of an element.
+// const fruits = ["Apple", "Banana", "Mango"];
+// console.log(fruits.indexOf("Mango"));
+
+// // Check if array contains a value.
+// const fruits = ["Apple", "Banana", "Mango"];
+// console.log(fruits.includes("Banana"));
+
+// // Join array elements with .
+// const fruits = ["Apple", "Banana", "Mango"];
+// console.log(fruits.join("-"));
+
+// // Merge two arrays using spread operator.
+// const arr1 = [1, 2, 3];
+// const arr2 = [4, 5, 6];
+// const result = [...arr1, ...arr2];
+// console.log(result);
+
+// // Copy array using spread operator.
+// const arr = [10, 20, 30];
+// const copy = [...arr];
+// console.log(copy);
+
+// // Find maximum value using `Math.max`.
+// const numbers = [10, 50, 80, 25];
+// console.log(Math.max(...numbers));
+
+// // Swap two variables using destructuring.
+// let a = 10;
+// let b = 20;
+// let temp = a;
+// a = b;
+// b = temp;
+// console.log(a, b);
 
 //? Array Iteration Methods
 
