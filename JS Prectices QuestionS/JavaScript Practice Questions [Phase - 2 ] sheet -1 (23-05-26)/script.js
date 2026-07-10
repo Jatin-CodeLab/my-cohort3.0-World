@@ -651,24 +651,150 @@ console.log("Hare Krishna !");
 // | Chaining nahi kar sakte                 | Chaining (`filter().map()`) kar sakte |
 // | Mostly printing ya side effects ke liye | New array banane ke liye              |
 
-
 //? Objects Basics
 
-// Create object for a student.
-// Access properties using dot notation.
-// Access properties using bracket notation.
-// Add new property dynamically.
-// Update existing property.
-// Delete a property.
-// Create object method.
-// Use `this` keyword inside method.
-// Create nested object.
-// 10. Access deeply nested property.
-// Destructure object properties.
-// Rename variables while destructuring.
-// Add default values during destructuring.
-// Copy object using spread operator.
-// Merge two objects.
+// // Create object for a student.
+// let student = {
+//     name : 'krishna',
+//     city : 'vrindavan',
+//     age : 85,
+//     phoneNumber : 8545652519,
+// }
+// console.log(student);
+
+// // Access properties using dot notation.
+// let student = {
+// 	name: "Jatin",
+// 	age: 21,
+// 	course: "BCA",
+// };
+// console.log(student.name);
+// console.log(student.age);
+
+// // Access properties using bracket notation.
+// let student = {
+// 	name: "Jatin",
+// 	age: 21,
+// 	course: "BCA",
+// };
+// console.log(student["name"]);
+// console.log(student["course"]);
+
+// // Add new property dynamically.
+// let student = {
+// 	name: "Jatin",
+// 	age: 21,
+// 	course: "BCA",
+// };
+// student.city = "Ahmedabad";
+// console.log(student);
+
+// // Update existing property.
+// let student = {
+// 	name: "Jatin",
+// 	age: 21,
+// 	course: "BCA",
+// };
+// student.age = 22;
+// console.log(student);
+
+// // Delete a property.
+// let student = {
+// 	name: "Jatin",
+// 	age: 21,
+// 	course: "BCA",
+// };
+// delete student.course;
+// console.log(student);
+
+// // Create object method.
+// let student = {
+// 	name: "Jatin",
+// 	greet: function () {
+// 		console.log("Welcome");
+// 	},
+// };
+// student.greet();
+
+// // Use `this` keyword inside method.
+// let student = {
+// 	name: "Jatin",
+
+// 	greet: function () {
+// 		console.log("Hello " + this.name);
+// 	},
+// };
+
+// student.greet();
+
+// // Create nested object.
+// let student = {
+// 	name: "Jatin",
+
+// 	address: {
+// 		city: "Ahmedabad",
+// 		state: "Gujarat",
+// 	},
+// };
+// console.log(student);
+
+// // Access deeply nested property.
+// let student = {
+// 	name: "Jatin",
+
+// 	address: {
+// 		city: "Ahmedabad",
+// 		state: "Gujarat",
+// 	},
+// };
+// console.log(student.address.city);
+
+// // Destructure object properties.
+// let s = {
+//     name: 'krishna',
+//     age :43
+// }
+// let {name,age} = s
+// console.log(name);
+// console.log(age);
+
+// // Rename variables while destructuring.
+// let student = {
+// 	name: "krishna",
+
+// 	age: 21,
+// };
+// let { name: studentName } = student;
+// console.log(studentName);
+
+// // Add default values during destructuring.
+// let student = {
+// 	name: "krishna",
+// 	age: 21,
+// };
+// let { city = "Palanpur" } = student;
+// console.log(city);
+
+// // Copy object using spread operator.
+// let student = {
+// 	name: "krishna",
+// 	age: 21,
+// };
+// let copy = { ...student };
+// console.log(copy);
+
+// // Merge two objects.
+// let obj1 = {
+// 	name: "Jatin",
+// };
+// let obj2 = {
+// 	age: 21,
+// };
+// let result = {
+// 	...obj1,
+// 	...obj2,
+// };
+// console.log(result);
 
 //? Advanced Objects + Real Logic
 
