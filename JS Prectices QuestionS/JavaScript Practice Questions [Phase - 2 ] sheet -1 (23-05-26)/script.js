@@ -488,26 +488,169 @@ console.log("Hare Krishna !");
 
 //? Array Iteration Methods
 
-// Use `forEach` to print all numbers doubled.
-// Use `map` to square all numbers.
-// Use `filter` to get even numbers.
-// Use `reduce` to calculate sum.
-// Use `reduce` to find maximum number.
-// Use `find` to get first even number.
-// Use `findIndex` to locate number > 50.
-// Use `some` to check if any number is negative.
-// Use `every` to check if all numbers are positive.
-// Create array of names and convert all to uppercase.
-// Filter all students with marks > 80.
-// Calculate average using reduce.
-// Count occurrences of numbers in array.
-// Flatten nested arrays using `flat`.
-// Remove duplicates using `Set`.
-// Sort array of objects by age.
-// Find total price of shopping cart.
-// Group users by age.
-// Chain `filter` and `map`.
-// Explain difference between `map` and `forEach`.
+// // Use `forEach` to print all numbers doubled.
+// let number = [10, 20, 30, 40, 50]
+// number.forEach((num) => {
+//     console.log(num +5);
+// })
+
+// // Use `map` to square all numbers.
+// let number = [10, 20, 30, 40, 50]
+// number.map((num) => {
+//     console.log(num * num);
+
+// })
+
+// // Use `filter` to get even numbers.
+// let number = [1, 2, 3, 4, 5, 6, 7]
+// let even = number.filter((num) => {
+//     return num % 2 === 0 ;
+// })
+// console.log(even);
+
+// // Use `reduce` to calculate sum.
+// let number = [1, 2, 3, 4, 5]
+// let sum = number.reduce((pele,baadme) => {
+//     return pele + baadme;
+// })
+// console.log(sum);
+
+// // Use `reduce` to find maximum number.
+// let number = [150, 23, 36, 48, 51, 96, 67, 84, 39, 10]
+// let maximum = number.reduce((pahele,baadme) => {
+//     return pahele > baadme ? pahele : baadme;
+// })
+// console.log(maximum);
+
+// // Use `find` to get first even number.
+// let number = [1, 562, 3, 4, 5, 6]
+// let firstEvenNumber = number.find((num) => {
+//     return num % 2 === 0;
+// })
+// console.log(firstEvenNumber);
+
+// // Use `findIndex` to locate number > 50.
+// let num = [10, 20, 55, 40, 60, 70, 90]
+// let index = num.findIndex((num) => {
+//  return num > 50
+// })
+// console.log(index);
+
+// // Use `some` to check if any number is negative.
+// let number = [10, 50, 34, -34]
+// let someNumber = number.some((num) => {
+//     return num > 0
+// })
+// console.log(someNumber);
+
+// // Use `every` to check if all numbers are positive.
+// let numbers = [10, 20, 30];
+// let ans = numbers.every((num) => {
+// 	return num > 0;
+// });
+// console.log(ans);
+
+// // Create array of names and convert all to uppercase.
+// let names = ["jatin", "rahul", "amit"];
+// let upper = names.map((name) => {
+// 	return name.toUpperCase();
+// });
+// console.log(upper);
+
+// // Filter all students with marks > 80.
+// let students = [
+// 	{ name: "Jatin", marks: 90 },
+// 	{ name: "Rahul", marks: 75 },
+// 	{ name: "Amit", marks: 85 },
+// ];
+// let topper = students.filter((student) => {
+// 	return student.marks > 80;
+// });
+// console.log(topper);
+
+// // Calculate average using reduce.
+// let mark = [85, 87, 90, 83, 86, 87, 87]
+// let total = mark.reduce((pahela, baadka) => {
+//     return pahela + baadka
+// })
+// let avg = total / mark.length
+// console.log(avg);
+
+// // Count occurrences of numbers in array.
+// let number = [1, 3, 3, 3, 6, 6, 8, 8, 9, 5, 4, 4, 4, 4, 4, 4]
+// let count = number.reduce((pahele, val) => {
+//     pahele[val] = (pahele[val] || 0) + 1;
+//     return pahele
+// },{})
+// console.log(count);
+
+// // Flatten nested arrays using `flat`.
+// let arr = [1, [2, 3], [4, [5]]];
+// console.log(arr.flat(2));
+
+// // Remove duplicates using `Set`.
+// let numbers = [1, 2, 2, 3, 4, 4, 5];
+// let unique = [...new Set(numbers)];
+// console.log(unique);
+
+// // Sort array of objects by age.
+// let data = [
+//     {name : "jatin",age : 34},
+//     {name : "madhav",age : 45},
+//     {name : "gopinath",age : 67},
+//     {name : "gokul",age : 31},
+// ]
+// data.sort((a, b) => {
+//     return a.age - b.age
+// })
+// console.log(data);
+
+// // Find total price of shopping cart.
+// let data = [
+// 	{ name: "jatin", price: 20000 },
+// 	{ name: "madhav", price: 500 },
+// 	{ name: "gopinath", price: 1000 },
+// ];
+// let total = data.reduce((a, b) => {
+//     return a + b.price
+// },0)
+// console.log(total);
+
+// // Group users by age.
+// let users = [
+// 	{ name: "A", age: 20 },
+// 	{ name: "B", age: 20 },
+// 	{ name: "C", age: 25 },
+// ];
+// let group = users.reduce((a, b) => {
+// 	if (!a[b.age]) {
+// 		a[b.age] = [];
+// 	}
+// 	a[b.age].push(b);
+// 	return a;
+// }, {});
+// console.log(group);
+
+// // Chain `filter` and `map`.
+// let numbers = [10, 20, 30, 40, 50];
+// let result = numbers
+// 	.filter((num) => {
+// 		return num > 20;
+// 	})
+// 	.map((num) => {
+// 		return num * 2;
+// 	});
+// console.log(result);
+
+// // Explain difference between `map` and `forEach`.
+// | forEach()                               | map()                                 |
+// | --------------------------------------- | ------------------------------------- |
+// | Sirf loop chalata hai                   | Loop + New Array return karta hai     |
+// | Return value `undefined` hoti hai       | Naya array return karta hai           |
+// | Data transform karne ke liye nahi       | Data transform karne ke liye best     |
+// | Chaining nahi kar sakte                 | Chaining (`filter().map()`) kar sakte |
+// | Mostly printing ya side effects ke liye | New array banane ke liye              |
+
 
 //? Objects Basics
 
