@@ -798,20 +798,136 @@ console.log("Hare Krishna !");
 
 //? Advanced Objects + Real Logic
 
-// Use `Object.keys()` on object.
-// Use `Object.values()`.
-// Use `Object.entries()`.
-// Loop through object using `for...in`.
-// Freeze an object and test modification.
-// Seal an object and test modification.
-// Create array of objects for users.
-// Find user with highest age.
-// Build a mini TODO app using arrays + objects.
-// Build a shopping cart system with:
-// - add item
-// - remove item
-// - calculate total
-// - quantity update
+// // Use `Object.keys()` on object.
+// let users = {
+//     name: 'jatin',
+//     age: 23,
+//     city: 'vrindavan',
+//     pincode : 232323
+// }
+// console.log(Object.keys(users));
+
+// // Use `Object.values()`.
+// let users = {
+//     name: 'jatin',
+//     age: 23,
+//     city: 'vrindavan',
+//     pincode : 232323
+// }
+// console.log(Object.values(users));
+
+// // Use `Object.entries()`.
+// let users = {
+//     name: 'jatin',
+//     age: 23,
+//     city: 'vrindavan',
+//     pincode : 232323
+// }
+// console.log(Object.entries(users));
+
+// // Loop through object using `for...in`.
+// let users = {
+//     name: 'jatin',
+//     age: 23,
+//     city: 'vrindavan',
+//     pincode : 232323
+// }
+// for (let data in users) {
+//     console.log(data,users[data]);
+// }
+
+// // Freeze an object and test modification.
+// let user = {
+//     name: 'krishna'
+// }
+// Object.freeze(user)
+// user.name = "Rahul";
+// console.log(user);
+
+// // Seal an object and test modification.
+// let user = {
+//     name : 'krishna'
+// }
+// Object.seal(user)
+// user.name = 'gopinath'
+// console.log(user);
+
+// // Create array of objects for users.
+// let data = [
+// 	{
+// 		id: 1,
+// 		name: "krishna",
+// 	},
+// 	{
+// 		id: 2,
+// 		name: "gopinath",
+// 	},
+// 	{
+// 		id: 3,
+// 		name: "srinathji",
+// 	},
+// 	{
+// 		id: 4,
+// 		name: "madan mohan",
+// 	},
+// ];
+// console.log(data[1]);
+
+// // Find user with highest age.
+// let data = [
+//     {id:1,age:23},
+//     {id:2,age:43},
+//     {id:3,age:13},
+//     {id:4,age:83},
+//     {id:5,age:23},
+// ]
+// console.log(data);
+// let maxAge = data.reduce((pahele, baadme) => {
+//     return pahele.age > baadme.age ? pahele : baadme
+// })
+// console.log(maxAge);
+
+// // Build a mini TODO app using arrays + objects.
+// let todo = []
+// function addTodo(task,age) {
+//     todo.push({task,age})
+// }
+// addTodo('runnin',32)
+// addTodo('waking',3)
+// addTodo('fat',3)
+// console.log(todo[1]);
+
+// // Build a shopping cart system with:
+// // - add item
+// // - remove item
+// // - calculate total
+// // - quantity update
+// let cart = [];
+// function additem(name, price, qty) {
+// 	cart.push({
+// 		name,
+// 		price,
+// 		qty,
+// 	});
+// }
+// additem("leptop", 51000, 2);
+// additem("phone", 128000, 7);
+// additem("pad", 53300, 6);
+// additem("kite", 89000, 9);
+// console.log(cart);
+// let total = cart.reduce((acc, item) => {
+// 	return acc + item.price * item.qty;
+// }, 0);
+// console.log(total);
+// cart = cart.filter((item) => {
+// 	return item.name !== "leptop";
+// });
+// console.log(cart);
+// let item = cart.find((item) => {
+// 	return item.name === "phone";
+// });
+// item.qty = 3;
+// console.log(item);
 
 //? Bonus Hard Questions : Debugging Questions
 
