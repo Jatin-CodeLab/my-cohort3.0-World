@@ -6,6 +6,9 @@ import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import MainLayout from "../layouts/MainLayout";
 import ProtectedRoute from "./ProtectedRoute";
+import Home from "../pages/subpages/Home";
+import Shop from "../pages/subpages/Shop";
+import About from "../pages/subpages/About";
 
 function AppRoutes() {
 	let router = createBrowserRouter([
@@ -28,12 +31,26 @@ function AppRoutes() {
 			element: <ProtectedRoute />,
 			children: [
 				{
-					path: '',
-					element:<MainLayout/>
-				}
-			]
+					path: "",
+					element: <MainLayout />,
+					children: [
+						{
+							path: '',
+							element: <Home />,
+						},
+						{
+							path: "shop",
+							element: <Shop />,
+						},
+						{
+							path: "about",
+							element: <About />,
+						},
+					],
+				},
+			],
 		},
-  ]);
+	]);
   return <RouterProvider router={router} />;
 }
 export default AppRoutes;
