@@ -13,6 +13,7 @@ export const AuthProvider = ({ children }) => {
     
     console.log('register',registerUsers);
     console.log('logged',loggedInUsers);
+
     
 
 	return (
