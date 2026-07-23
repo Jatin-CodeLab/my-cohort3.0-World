@@ -1,7 +1,7 @@
 import React from "react";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
-import Authlayout from "../layouts/Authlayout";
+import Authlayout from "../layouts/AuthLayout";
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import MainLayout from "../layouts/MainLayout";
