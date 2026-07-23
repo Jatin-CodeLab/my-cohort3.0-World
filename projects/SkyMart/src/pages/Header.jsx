@@ -1,52 +1,68 @@
-import { ShoppingCart, LogOut, Zap } from "lucide-react";
+import { ShoppingCart, Zap, Menu, X } from "lucide-react";
 import { NavLink, useNavigate } from "react-router";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Auth } from "../Context/AppContext";
 
-
 function Header() {
-	let navigate = useNavigate();
-	
+	const navigate = useNavigate();
 	const { loggedInUsers } = useContext(Auth);
+
+	const [menuOpen, setMenuOpen] = useState(false);
+const { registerUsers, setRegisterUsers, setLoggedInUsers } = useContext(Auth);
+	const handleLogout = () => {
+		localStorage.removeItem("loggedingUser");
+		setLoggedInUsers(null);
+		navigate("/");
+	};
+
 	return (
-		<header className="w-full border-b border-zinc-800 bg-[#0d0d0d] text-white">
-			<div className="max-w-7xl mx-auto h-20 px-6 flex items-center justify-between">
+		<header className="w-full border-b border-zinc-800 bg-[#0d0d0d] text-white sticky top-0 z-50">
+			<div className="max-w-7xl mx-auto h-20 px-4 sm:px-6 flex items-center justify-between">
 				{/* Logo */}
-				<div className="flex items-center gap-3">
-					<div className="w-11 h-11 rounded-2xl bg-lime-400 flex items-center justify-center">
+				<div
+					onClick={() => navigate("/main")}
+					className="flex items-center gap-3 cursor-pointer"
+				>
+					<div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-lime-400 flex items-center justify-center">
 						<Zap className="text-black" size={18} />
 					</div>
 
-					<h1 className="text-3xl font-bold">
+					<h1 className="text-2xl sm:text-3xl font-bold">
 						Sky<span className="text-lime-400">Mart</span>
 					</h1>
 				</div>
 
-				{/* Navigation */}
-				<nav className="hidden md:flex items-center gap-10 text-lg font-semibold">
+				{/* Desktop Navigation */}
+				<nav className="hidden md:flex items-center gap-8 text-lg font-semibold">
 					<NavLink
 						to="/main"
-						className={({ isActive }) =>
-							isActive ? "font-bold text-green-500" : "text-white"
-						}
 						end
+						className={({ isActive }) =>
+							isActive
+								? "text-lime-400 font-bold"
+								: "text-white hover:text-lime-400 duration-300"
+						}
 					>
 						Home
 					</NavLink>
 
 					<NavLink
-						to={"/main/shop"}
+						to="/main/shop"
 						className={({ isActive }) =>
-							isActive ? "font-bold text-green-500" : "text-white"
+							isActive
+								? "text-lime-400 font-bold"
+								: "text-white hover:text-lime-400 duration-300"
 						}
 					>
 						Shop
 					</NavLink>
 
 					<NavLink
-						to={"/main/about"}
+						to="/main/about"
 						className={({ isActive }) =>
-							isActive ? "font-bold text-green-500" : "text-white"
+							isActive
+								? "text-lime-400 font-bold"
+								: "text-white hover:text-lime-400 duration-300"
 						}
 					>
 						About
@@ -54,27 +70,95 @@ function Header() {
 				</nav>
 
 				{/* Right Side */}
-				<div className="flex items-center gap-4">
+				<div className="flex items-center gap-2 sm:gap-3">
 					{/* User */}
-					<div className="hidden sm:flex items-center gap-3 bg-[#181818] border border-zinc-700 rounded-2xl px-4 py-2">
+					<div className="hidden lg:flex items-center gap-3 bg-[#181818] border border-zinc-700 rounded-2xl px-4 py-2">
 						<div className="w-10 h-10 rounded-xl bg-lime-400 text-black font-bold flex items-center justify-center">
-							{loggedInUsers.name.charAt(0).toUpperCase()}
+							{loggedInUsers?.name?.charAt(0)?.toUpperCase()}
 						</div>
 
-						<span className="font-semibold">{loggedInUsers.name}</span>
+						<span className="font-semibold whitespace-nowrap">
+							{loggedInUsers?.name}
+						</span>
 					</div>
 
 					{/* Cart */}
-					<button className="w-12 h-12 rounded-2xl border border-zinc-700 flex items-center justify-center hover:bg-zinc-800 transition">
+					<button className="p-2 sm:p-3 rounded-xl border border-zinc-700 hover:bg-zinc-800 duration-300">
 						<ShoppingCart size={22} />
 					</button>
 
 					{/* Logout */}
-					<button className="w-12 h-12 rounded-2xl border border-zinc-700 flex items-center justify-center hover:bg-zinc-800 transition">
-						<LogOut size={22} />
+					<button
+						onClick={handleLogout}
+						className="text-2xl hidden md:block px-4 py-[.8rem] rounded-xl border border-zinc-700 hover:bg-red-900 duration-300"
+					>
+						Log Out
+					</button>
+
+					{/* Mobile Menu Button */}
+					<button
+						onClick={() => setMenuOpen(!menuOpen)}
+						className="md:hidden p-2 rounded-xl border border-zinc-700"
+					>
+						{menuOpen ? <X size={22} /> : <Menu size={22} />}
 					</button>
 				</div>
 			</div>
+
+			{/* Mobile Menu */}
+			{menuOpen && (
+				<div className="md:hidden border-t border-zinc-800 bg-[#111111]">
+					<nav className="flex flex-col p-5 gap-5">
+						<NavLink
+							to="/main"
+							onClick={() => setMenuOpen(false)}
+							className={({ isActive }) =>
+								isActive ? "text-lime-400 font-bold" : "text-white"
+							}
+							end
+						>
+							Home
+						</NavLink>
+
+						<NavLink
+							to="/main/shop"
+							onClick={() => setMenuOpen(false)}
+							className={({ isActive }) =>
+								isActive ? "text-lime-400 font-bold" : "text-white"
+							}
+						>
+							Shop
+						</NavLink>
+
+						<NavLink
+							to="/main/about"
+							onClick={() => setMenuOpen(false)}
+							className={({ isActive }) =>
+								isActive ? "text-lime-400 font-bold" : "text-white"
+							}
+						>
+							About
+						</NavLink>
+
+						<div className="flex gap-2 items-center justify-center border-t-1 p-2">
+							<div className="flex items-center justify-center  gap-3  border-zinc-700">
+								<div className="w-10 h-10 rounded-xl bg-lime-400 text-black font-bold flex items-center justify-center">
+									{loggedInUsers?.name?.charAt(0)?.toUpperCase()}
+								</div>
+
+								<span>{loggedInUsers?.name}</span>
+							</div>
+
+							<button
+								onClick={handleLogout}
+								className="px-3 py-3 rounded-xl border border-zinc-700 hover:bg-red-800 duration-300"
+							>
+								Log Out
+							</button>
+						</div>
+					</nav>
+				</div>
+			)}
 		</header>
 	);
 }
