@@ -17,7 +17,7 @@ const { registerUsers, setRegisterUsers, setLoggedInUsers } = useContext(Auth);
 
 	return (
 		<header className="w-full border-b border-zinc-800 bg-[#0d0d0d] text-white sticky top-0 z-50">
-			<div className="max-w-7xl mx-auto h-20 px-4 sm:px-6 flex items-center justify-between">
+			<div className="max-w-[90%] pl-2 mx-auto h-20  flex items-center justify-between">
 				{/* Logo */}
 				<div
 					onClick={() => navigate("/main")}
@@ -73,7 +73,7 @@ const { registerUsers, setRegisterUsers, setLoggedInUsers } = useContext(Auth);
 				<div className="flex items-center gap-2 sm:gap-3">
 					{/* User */}
 					<div className="hidden lg:flex items-center gap-3 bg-[#181818] border border-zinc-700 rounded-2xl px-4 py-2">
-						<div className="w-10 h-10 rounded-xl bg-lime-400 text-black font-bold flex items-center justify-center">
+						<div className="px-3 py-1 rounded-xl bg-lime-400 text-black font-bold flex items-center justify-center text-2xl">
 							{loggedInUsers?.name?.charAt(0)?.toUpperCase()}
 						</div>
 
@@ -142,7 +142,7 @@ const { registerUsers, setRegisterUsers, setLoggedInUsers } = useContext(Auth);
 
 						<div className="flex gap-2 items-center justify-center border-t-1 p-2">
 							<div className="flex items-center justify-center  gap-3  border-zinc-700">
-								<div className="w-10 h-10 rounded-xl bg-lime-400 text-black font-bold flex items-center justify-center">
+								<div className="px-3 py-1 rounded-xl bg-lime-400 text-black font-bold flex items-center justify-center text-2xl">
 									{loggedInUsers?.name?.charAt(0)?.toUpperCase()}
 								</div>
 

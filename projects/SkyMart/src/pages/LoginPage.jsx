@@ -67,19 +67,19 @@ export default function LoginPage() {
 				{/* Bottom Cards */}
 
 				<div className="grid grid-cols-3 gap-5 mt-16">
-					<div className="border border-zinc-700 rounded-3xl p-6 text-center">
+					<div className="border border-zinc-700 rounded-3xl text-center flex flex-col items-center justify-center gap-2">
 						<h2 className="text-lime-400 text-4xl font-bold">20K+</h2>
-						<p className="text-zinc-500 mt-2">Products</p>
+						<p className="text-zinc-500 text-[2vw]">Products</p>
 					</div>
 
-					<div className="border border-zinc-700 rounded-3xl p-6 text-center">
+					<div className="border border-zinc-700 rounded-3xl p-6 text-center flex flex-col items-center justify-center gap-2">
 						<h2 className="text-lime-400 text-4xl font-bold">50K+</h2>
-						<p className="text-zinc-500 mt-2">Users</p>
+						<p className="text-zinc-500 text-[2vw]">Users</p>
 					</div>
 
-					<div className="border border-zinc-700 rounded-3xl p-6 text-center">
+					<div className="border border-zinc-700 rounded-3xl p-6 text-center flex flex-col items-center justify-center gap-2">
 						<h2 className="text-lime-400 text-4xl font-bold">4.9★</h2>
-						<p className="text-zinc-500 mt-2">Rating</p>
+						<p className="text-zinc-500 text-[2vw]">Rating</p>
 					</div>
 				</div>
 			</div>
