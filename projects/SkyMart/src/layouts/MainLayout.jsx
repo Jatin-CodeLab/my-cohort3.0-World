@@ -2,7 +2,7 @@ import React from 'react'
 
 function MainLayout() {
   return (
-    <div>MainLayout</div>
+    <div>this is main layout</div>
   )
 }
 
