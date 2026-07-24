@@ -14,6 +14,7 @@ import {
 	Eye,
 } from "lucide-react";
 import { NavLink, useNavigate } from "react-router";
+import Card from "./subShop/Card";
 
  function Home() {
 		return (
@@ -232,40 +233,8 @@ import { NavLink, useNavigate } from "react-router";
 						</div>
 					</div>
 
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-						{[1, 2, 3].map((item) => (
-							<div
-								key={item}
-								className="rounded-3xl border border-zinc-700 bg-[#111111] overflow-hidden hover:border-lime-400 transition-all duration-300"
-							>
-								<div className="h-64 bg-zinc-800 flex items-center justify-center">
-									<Package size={70} className="text-zinc-500" />
-								</div>
-
-								<div className="p-6">
-									<div className="flex justify-between items-center">
-										<h3 className="text-2xl font-bold">Product {item}</h3>
-
-										<button>
-											<Heart className="text-zinc-500 hover:text-red-500 transition" />
-										</button>
-									</div>
-
-									<p className="text-zinc-400 mt-3">
-										Premium quality product with modern design.
-									</p>
-
-									<div className="flex items-center justify-between mt-6">
-										<h2 className="text-3xl font-bold text-lime-400">₹1999</h2>
-
-										<button className="bg-lime-400 hover:bg-lime-300 transition text-black rounded-xl px-5 py-2 font-semibold flex items-center gap-2">
-											<Eye size={18} />
-											View
-										</button>
-									</div>
-								</div>
-							</div>
-						))}
+					<div className="">
+						<Card/>
 					</div>
 				</section>
 				{/* ================= CTA ================= */}
