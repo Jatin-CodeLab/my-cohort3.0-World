@@ -46,30 +46,6 @@ function Shop() {
 				</div>
 			</section>
 
-			{/* ================= SEARCH ================= */}
-
-			<section className="mt-10">
-				<div className="flex flex-col lg:flex-row gap-5">
-					<div className="flex-1 relative">
-						<Search
-							size={22}
-							className="absolute left-5 top-1/2 -translate-y-1/2 text-zinc-500"
-						/>
-
-						<input
-							type="text"
-							placeholder="Search products..."
-							className="w-full bg-[#111111] border border-zinc-700 rounded-2xl py-4 pl-14 pr-5 outline-none focus:border-lime-400"
-						/>
-					</div>
-
-					<button className="flex items-center justify-center gap-3 bg-[#111111] border border-zinc-700 rounded-2xl px-8 py-4 hover:border-lime-400 transition">
-						<SlidersHorizontal size={20} />
-						Filters
-					</button>
-				</div>
-			</section>
-
 			{/* ================= CATEGORIES ================= */}
 
 			<section className="mt-12">
@@ -84,7 +60,10 @@ function Shop() {
 				</div>
 
 				<div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-5 mt-8">
-					<div className="group cursor-pointer rounded-3xl border border-zinc-700 bg-[#111111] p-6 hover:border-lime-400 transition">
+					<div
+						onClick={() => navigate("/main/shop?category=electronics")}
+						className="group cursor-pointer rounded-3xl border border-zinc-700 bg-[#111111] p-6 hover:border-lime-400 transition"
+					>
 						<div className="w-16 h-16 mx-auto rounded-2xl bg-lime-400/10 flex items-center justify-center group-hover:scale-110 transition">
 							<Laptop className="text-lime-400" size={30} />
 						</div>
@@ -140,8 +119,8 @@ function Shop() {
 						<h3 className="mt-5 text-center font-semibold">Audio</h3>
 					</div>
 				</div>
-      </section>
-      <Card/>
+			</section>
+			<Card />
 		</div>
 	);
 }

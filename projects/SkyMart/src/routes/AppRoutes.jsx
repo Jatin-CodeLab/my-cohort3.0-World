@@ -9,6 +9,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import Home from "../pages/subpages/Home";
 import Shop from "../pages/subpages/Shop";
 import About from "../pages/subpages/About";
+import AddToCardPage from "../pages/subpages/subShop/AddToCardPage";
 
 function AppRoutes() {
 	let router = createBrowserRouter([
@@ -35,7 +36,7 @@ function AppRoutes() {
 					element: <MainLayout />,
 					children: [
 						{
-							path: '',
+							path: "",
 							element: <Home />,
 						},
 						{
@@ -46,6 +47,10 @@ function AppRoutes() {
 							path: "about",
 							element: <About />,
 						},
+						{
+							path: "addToCart",
+							element: <AddToCardPage />,
+						}
 					],
 				},
 			],

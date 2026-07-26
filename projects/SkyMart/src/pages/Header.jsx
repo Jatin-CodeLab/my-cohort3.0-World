@@ -8,12 +8,8 @@ function Header() {
 	const { loggedInUsers } = useContext(Auth);
 
 	const [menuOpen, setMenuOpen] = useState(false);
-const { registerUsers, setRegisterUsers, setLoggedInUsers } = useContext(Auth);
-	const handleLogout = () => {
-		localStorage.removeItem("loggedingUser");
-		setLoggedInUsers(null);
-		navigate("/");
-	};
+	const { registerUsers, setRegisterUsers, setLoggedInUsers } =
+		useContext(Auth);
 
 	return (
 		<header className="w-full border-b border-zinc-800 bg-[#0d0d0d] text-white sticky top-0 z-50">
@@ -83,16 +79,25 @@ const { registerUsers, setRegisterUsers, setLoggedInUsers } = useContext(Auth);
 					</div>
 
 					{/* Cart */}
-					<button className="p-2 sm:p-3 rounded-xl border border-zinc-700 hover:bg-zinc-800 duration-300">
+					<button
+						onClick={() => navigate("/main/addToCart")}
+						className="p-2 sm:p-3 rounded-xl border border-zinc-700 hover:bg-zinc-800 duration-300"
+					>
 						<ShoppingCart size={22} />
 					</button>
 
 					{/* Logout */}
+
 					<button
-						onClick={handleLogout}
 						className="text-2xl hidden md:block px-4 py-[.8rem] rounded-xl border border-zinc-700 hover:bg-red-900 duration-300"
+						onClick={() => {
+							setLoggedInUsers(null);
+							setCartItems([]);
+							localStorage.removeItem("loggedingUser");
+							navigate("/");
+						}}
 					>
-						Log Out
+						Logout
 					</button>
 
 					{/* Mobile Menu Button */}

@@ -16,7 +16,10 @@ import {
 import { NavLink, useNavigate } from "react-router";
 import Card from "./subShop/Card";
 
- function Home() {
+
+function Home() {
+const navigate = useNavigate();
+	 
 		return (
 			<div className="min-h-screen bg-[#0d0d0d] text-white p-4 sm:p-6 lg:p-8">
 				{/* ================= HERO ================= */}
@@ -164,9 +167,10 @@ import Card from "./subShop/Card";
 							</p>
 						</div>
 
-            <NavLink
-              to={'/main/shop'}
-              className="hidden md:block border border-zinc-700 px-6 py-3 rounded-2xl hover:bg-zinc-800 transition">
+						<NavLink
+							to={"/main/shop"}
+							className="hidden md:block border border-zinc-700 px-6 py-3 rounded-2xl hover:bg-zinc-800 transition"
+						>
 							View All
 						</NavLink>
 					</div>
@@ -174,7 +178,10 @@ import Card from "./subShop/Card";
 					<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
 						{/* Electronics */}
 
-						<div className="group rounded-3xl border border-zinc-700 bg-[#111111] p-8 hover:border-lime-400 transition-all duration-300 cursor-pointer">
+						<div
+							onClick={() => navigate("/main/shop?category=electronics")}
+							className="group rounded-3xl border border-zinc-700 bg-[#111111] p-8 hover:border-lime-400 transition-all duration-300 cursor-pointer"
+						>
 							<div className="w-16 h-16 rounded-2xl bg-lime-400/10 flex items-center justify-center group-hover:scale-110 transition">
 								<Laptop className="text-lime-400" size={32} />
 							</div>
@@ -186,7 +193,10 @@ import Card from "./subShop/Card";
 
 						{/* Fashion */}
 
-						<div className="group rounded-3xl border border-zinc-700 bg-[#111111] p-8 hover:border-pink-500 transition-all duration-300 cursor-pointer">
+						<div
+							onClick={() => navigate("/main/shop?category=women's clothing")}
+							className="group rounded-3xl border border-zinc-700 bg-[#111111] p-8 hover:border-pink-500 transition-all duration-300 cursor-pointer"
+						>
 							<div className="w-16 h-16 rounded-2xl bg-pink-500/10 flex items-center justify-center group-hover:scale-110 transition">
 								<Shirt className="text-pink-400" size={32} />
 							</div>
@@ -198,7 +208,10 @@ import Card from "./subShop/Card";
 
 						{/* Mobiles */}
 
-						<div className="group rounded-3xl border border-zinc-700 bg-[#111111] p-8 hover:border-blue-500 transition-all duration-300 cursor-pointer">
+						<div
+							onClick={() => navigate("/main/shop?category=women's clothing")}
+							className="group rounded-3xl border border-zinc-700 bg-[#111111] p-8 hover:border-blue-500 transition-all duration-300 cursor-pointer"
+						>
 							<div className="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center group-hover:scale-110 transition">
 								<Smartphone className="text-blue-400" size={32} />
 							</div>
@@ -222,19 +235,9 @@ import Card from "./subShop/Card";
 					</div>
 				</section>{" "}
 				{/* ================= FEATURED PRODUCTS ================= */}
-				<section className="mt-20">
-					<div className="flex items-center justify-between mb-8">
-						<div>
-							<h2 className="text-4xl font-bold">Featured Products</h2>
-
-							<p className="text-zinc-400 mt-2">
-								Handpicked products just for you.
-							</p>
-						</div>
-					</div>
-
+				<section className="mt-2">
 					<div className="">
-						<Card/>
+						<Card />
 					</div>
 				</section>
 				{/* ================= CTA ================= */}
