@@ -5,12 +5,15 @@ import { Auth } from "../Context/AppContext";
 
 function Header() {
 	const navigate = useNavigate();
-	const { loggedInUsers } = useContext(Auth);
 
 	const [menuOpen, setMenuOpen] = useState(false);
-	const { registerUsers, setRegisterUsers, setLoggedInUsers } =
-		useContext(Auth);
-
+const { loggedInUsers, setLoggedInUsers, setCartItems } = useContext(Auth);
+const handleLogout = () => {
+	setLoggedInUsers(null);
+	setCartItems([]);
+	localStorage.removeItem("loggedingUser");
+	navigate("/");
+};
 	return (
 		<header className="w-full border-b border-zinc-800 bg-[#0d0d0d] text-white sticky top-0 z-50">
 			<div className="max-w-[90%] pl-2 mx-auto h-20  flex items-center justify-between">
@@ -90,12 +93,7 @@ function Header() {
 
 					<button
 						className="text-2xl hidden md:block px-4 py-[.8rem] rounded-xl border border-zinc-700 hover:bg-red-900 duration-300"
-						onClick={() => {
-							setLoggedInUsers(null);
-							setCartItems([]);
-							localStorage.removeItem("loggedingUser");
-							navigate("/");
-						}}
+						onClick={handleLogout}
 					>
 						Logout
 					</button>

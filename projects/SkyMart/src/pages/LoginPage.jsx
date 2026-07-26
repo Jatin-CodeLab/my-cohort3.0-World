@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router";
 import { Auth } from "../Context/AppContext";
 import { useForm } from "react-hook-form";
+import { Navigate } from "react-router";
 
 export default function LoginPage() {
 	let navigate = useNavigate();
@@ -13,6 +14,9 @@ export default function LoginPage() {
 		reset,
 		formState: { errors },
 	} = useForm();
+	if (loggedInUsers) {
+		return <Navigate to="/main" replace />;
+	}
 	let formSubmit = (data) => {
 		let user = registerUsers.find((val) => {
 			return val.email === data.email && val.password === data.password;

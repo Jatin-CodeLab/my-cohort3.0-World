@@ -13,9 +13,11 @@ export default function RegisterPage() {
 		formState: { errors },
 	} = useForm();
 
-	const { registerUsers, setRegisterUsers, setLoggedInUsers } =
+	const { registerUsers, setRegisterUsers, setLoggedInUsers, loggedInUsers} =
 		useContext(Auth);
-
+if (loggedInUsers) {
+	return <Navigate to="/main" replace />;
+}
 	let formRegister = (data) => {
 		 let arr = [...registerUsers, data];
 				setRegisterUsers(arr)
