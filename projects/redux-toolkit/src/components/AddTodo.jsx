@@ -8,7 +8,7 @@ import { addTodo, removeTodo, updateTodo, } from "../features/todo/todoSlice";
 function AddTodo() {
 	let dispatch = useDispatch();
 	const {
-		addtotoFormIn,
+		register,
 		handleSubmit,
 		reset,
 		formState: { errors },
@@ -27,7 +27,7 @@ function AddTodo() {
 				className="mt-8 flex flex-col sm:flex-row gap-4"
 			>
 				<input
-					{...addtotoFormIn("todo", { required: "Please Enter Todo" })}
+					{...register("todo", { required: "Please Enter Todo" })}
 					type="text"
 					placeholder="Enter your todo..."
 					className="w-[90%] flex-1 px-5 py-4 rounded-2xl bg-[#1b1b1b] border border-zinc-700 text-white outline-none focus:border-lime-400"
